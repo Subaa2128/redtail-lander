@@ -251,7 +251,7 @@ const TellUs = () => {
             <motion.div
               className="image"
               initial={{ x: 1000 }} // Initial position of the image
-              animate={{ x: hover ? imageAnimationX : 5 }} // Final position of the image (move to the right by 100 pixels when hovered)
+              animate={{ x: hover ? imageAnimationX : 2 }} // Final position of the image (move to the right by 100 pixels when hovered)
               transition={{ duration: 0.5 }} // Duration of the animation
             >
               <img
