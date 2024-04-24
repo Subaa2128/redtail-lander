@@ -257,7 +257,7 @@ const TellUs = () => {
               <img
                 src={Mens}
                 alt=""
-                style={{ height: window.innerWidth <= 850 ? "70vh" : "115vh" }}
+                style={{ height: window.innerWidth <= 850 ? "80vh" : "115vh" }}
               />
             </motion.div>
           </div>
