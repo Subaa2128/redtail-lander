@@ -1,0 +1,125 @@
+.footer-container {
+  background-color: var(--background-two);
+  .footer-wrapper {
+    padding: 80px;
+    @media (max-width: 650px) {
+      padding: 40px 24px;
+    }
+    .first-container {
+      margin-bottom: 64px;
+      display: flex;
+      justify-content: flex-start;
+      gap: 46px;
+      @media (max-width: 900px) {
+        flex-direction: column;
+        gap: 24px;
+      }
+      .footer-logo {
+        width: 40%;
+        p {
+          padding-top: 16px;
+        }
+        @media (max-width: 900px) {
+          width: 100%;
+        }
+        .social-media {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 20px;
+          padding-top: 30px;
+          img {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+          }
+          @media (max-width: 650px) {
+            padding-top: 16px;
+          }
+        }
+      }
+      .border {
+        border-right: 1px solid var(--border-primary);
+        @media (max-width: 900px) {
+          border-bottom: 1px solid var(--border-primary);
+        }
+      }
+      .contact-info {
+        h2 {
+          padding-bottom: 24px;
+          @media (max-width: 650px) {
+            padding-bottom: 16px;
+          }
+        }
+        .info {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          @media (max-width: 650px) {
+            gap: 16px;
+          }
+          .details {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            img {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+      .house-of-operation {
+        h2 {
+          padding-bottom: 24px;
+          @media (max-width: 650px) {
+            padding-bottom: 16px;
+          }
+        }
+        .content {
+          display: flex;
+          gap: 16px;
+          flex-direction: column;
+          .details {
+            display: flex;
+            gap: 8px;
+            flex-direction: column;
+            h4 {
+              font-size: 20px;
+              line-height: normal;
+              @media (max-width: 650px) {
+                font-size: 16px;
+              }
+            }
+            .date {
+              display: flex;
+              gap: 8px;
+              .border {
+                border-right: 1px solid var(--border-primary);
+              }
+            }
+          }
+        }
+      }
+    }
+    .second-container {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-primary);
+      gap: 24px;
+      @media (max-width: 650px) {
+        flex-direction: column;
+      }
+      .terms-and-uses {
+        display: flex;
+        gap: 16px;
+        justify-content: space-between;
+        p {
+          cursor: pointer;
+          color: var(--secondary-color);
+        }
+      }
+    }
+  }
+}

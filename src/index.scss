@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "Gilroy-SemiBold";
+  src: local("GilroySemiBold"),
+    url("./assets/fonts/Gilroy-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: local("GilroyMedium"),
+    url("./assets/fonts/Gilroy-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Gilroy-regular";
+  src: local("GilroyRegular"),
+    url("./assets/fonts/Gilroy-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "NeuePower-Ultra";
+  src: local("NeuePowerUltra"),
+    url("./assets/fonts/NeuePower-Ultra.ttf") format("truetype");
+}
+
+:root {
+  /* FONTS */
+  --font-regular: "Gilroy-regular";
+  --font-bold: "Gilroy-SemiBold";
+  --font-light: "Gilroy-Medium";
+  --font-black: "NeuePower-Ultra";
+
+  /* COLOR-PALETTE */
+  --background-one: #fff;
+  --background-two: #454545;
+  --primary-color: #ffe6c7;
+  --secondary-color: #ff6000;
+  --button-primary: #777;
+  --button-secondary: #463333;
+
+  --border-primary: #555;
+  --border-secondary: #ddd;
+  --border-tertiary: #aaa;
+  --border-error: #ee3737;
+
+  --text-primary: #454545;
+  --text-secondary: #999;
+  --text-tertiary: #fff;
+  --text-highlight: #555;
+  --text-error: #ee3737;
+}
+html {
+  font-size: 62.5%;
+
+  @media (max-width: 576px) {
+    font-size: 55%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  font-family: var(--font-regular);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-one);
+  line-height: 1.5;
+  font-family: var(--font-light);
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  color: var(--text-primary);
+}
+
+.mx {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: var(--text-primary);
+  font-family: "NeuePower-Ultra";
+  font-size: 64px;
+
+  @media (max-width: 650px) {
+    font-size: 32px;
+  }
+}
+h2 {
+  color: var(--text-tertiary);
+  font-family: "NeuePower-Ultra";
+  font-size: 32px;
+  line-height: normal;
+  @media (max-width: 650px) {
+    font-size: 24px;
+  }
+}
+h3 {
+  color: var(--text-primary);
+  font-family: "NeuePower-Ultra";
+  font-size: 32px;
+
+  @media (max-width: 650px) {
+    font-size: 24px;
+  }
+}
+h4 {
+  color: var(--text-tertiary);
+  font-family: "Gilroy-Regular";
+  font-weight: 100;
+  font-size: 24px;
+
+  @media (max-width: 650px) {
+    font-size: 14px;
+  }
+}
+p {
+  color: var(--text-secondary);
+  font-family: "Gilroy-Medium";
+  font-size: 14px;
+
+  @media (max-width: 650px) {
+    font-size: 12px;
+  }
+}

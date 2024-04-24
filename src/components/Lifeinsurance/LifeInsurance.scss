@@ -1,0 +1,74 @@
+.life-insurance-container {
+  background-color: var(--background-two);
+  padding: 63px 80px;
+  @media (max-width: 650px) {
+    padding: 40px 24px;
+  }
+  .life-insurance-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 16px;
+    @media (max-width: 650px) {
+      flex-direction: column;
+    }
+    .content {
+      border: 1px solid var(--border-primary);
+      padding: 16px;
+      transition: background-color 1s ease;
+      p {
+        padding-top: 16px;
+        transition: 0.5s ease;
+      }
+      &:hover {
+        background-color: var(--secondary-color);
+
+        animation: move 2s forwards;
+        p {
+          color: var(--text-tertiary);
+        }
+      }
+    }
+    .first-container {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: 24px;
+      @media (max-width: 650px) {
+        gap: 16px;
+      }
+    }
+    .second-container {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      border: 1px solid var(--border-primary);
+      transition: background-color 1s ease;
+      .content {
+        border: none;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+      &:hover {
+        background-color: var(--secondary-color);
+
+        animation: move 2s forwards;
+        p {
+          color: var(--text-tertiary);
+        }
+      }
+    }
+  }
+}
+
+@keyframes move {
+  0% {
+    bottom: 0;
+    left: 0;
+  }
+  100% {
+    top: 0;
+    right: 0;
+  }
+}

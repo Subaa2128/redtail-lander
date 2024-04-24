@@ -1,0 +1,102 @@
+.tell-us-container {
+  background-color: var(--primary-color);
+  padding-top: 80px;
+
+  .tell-us-wrapper {
+    .heading {
+      padding-bottom: 64px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      @media (max-width: 650px) {
+        padding-bottom: 32px;
+        h1 {
+          text-align: center;
+          line-height: normal;
+        }
+      }
+
+      .border {
+        width: 160px;
+        height: 10px;
+        background: var(--secondary-color);
+      }
+    }
+    .content {
+      display: flex;
+      justify-content: center;
+      .tell-us-form {
+        background-color: var(--background-one);
+        padding: 32px;
+        margin-bottom: 80px;
+        position: absolute;
+
+        margin: 80px;
+        left: 0;
+        z-index: 10;
+        @media (max-width: 650px) {
+          margin: 24px;
+        }
+        .login-form {
+          padding-top: 32px;
+          .input-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+            padding-bottom: 24px;
+          }
+          .input-wrapper {
+            padding: 5px 0;
+            width: 100%;
+            label {
+              padding-bottom: 8px;
+              color: var(--background-two);
+            }
+            p {
+              color: var(--text-error);
+            }
+            .input-field {
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              padding: 12px;
+              gap: 8px;
+              border: 1px solid var(--border-secondary);
+              .border {
+                border-left: 1px solid var(--border-secondary);
+                height: 20px;
+              }
+              input,
+              input::placeholder {
+                color: var(--border-secondary);
+                border: none;
+                outline: none;
+                width: 100%;
+              }
+              input {
+                color: var(--background-two);
+              }
+            }
+          }
+
+          .btn_primary {
+            width: 100%;
+          }
+          h3 {
+            text-align: right;
+            text-decoration: underline;
+            padding: 11px 0;
+            color: var(--text-secondary);
+          }
+        }
+      }
+      .image {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

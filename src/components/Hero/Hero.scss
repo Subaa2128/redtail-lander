@@ -1,0 +1,29 @@
+.hero-container {
+  background-image: url(../../assets/images/hero-background.png);
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  .hero-wrapper {
+    position: absolute;
+    top: 134px;
+    left: 80px;
+    h1 {
+      color: #fff;
+      line-height: 76px;
+      @media (max-width: 650px) {
+        line-height: normal;
+      }
+    }
+    @media (max-width: 650px) {
+      top: 200px;
+      left: 24px;
+      right: 24px;
+    }
+    .content {
+      padding: 32px 0;
+    }
+  }
+}

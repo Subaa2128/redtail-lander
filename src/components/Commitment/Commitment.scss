@@ -1,0 +1,50 @@
+.commitment-container {
+  padding: 80px;
+  @media (max-width: 650px) {
+    padding: 40px 24px;
+  }
+  .commitment-wrapper {
+    .heading {
+      padding-bottom: 64px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      @media (max-width: 650px) {
+        padding-bottom: 32px;
+        h1 {
+          text-align: center;
+          line-height: normal;
+        }
+      }
+
+      .border {
+        width: 160px;
+        height: 10px;
+        background: var(--secondary-color);
+      }
+    }
+    .card-container {
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .card {
+        border: 1px solid var(--border-secondary);
+        padding: 24px;
+        width: 100%;
+        max-width: 270px;
+        @media (max-width: 730px) {
+          max-width: 100%;
+        }
+        h3 {
+          padding: 16px 0;
+          line-height: normal;
+        }
+      }
+    }
+  }
+}
