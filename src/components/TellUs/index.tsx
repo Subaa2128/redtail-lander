@@ -68,7 +68,7 @@ const TellUs = () => {
             <div className="border"></div>
           </div>
           <div className="content">
-            {!hover && (
+            {hover && (
               <motion.div
                 className="tell-us-form"
                 initial={{ y: 100 }} // Initial position of the form
@@ -251,10 +251,14 @@ const TellUs = () => {
             <motion.div
               className="image"
               initial={{ x: 1000 }} // Initial position of the image
-              animate={{ x: hover ? imageAnimationX : 10 }} // Final position of the image (move to the right by 100 pixels when hovered)
+              animate={{ x: hover ? imageAnimationX : 5 }} // Final position of the image (move to the right by 100 pixels when hovered)
               transition={{ duration: 0.5 }} // Duration of the animation
             >
-              <img src={Mens} alt="" />
+              <img
+                src={Mens}
+                alt=""
+                style={{ height: window.innerWidth <= 850 ? "70vh" : "115vh" }}
+              />
             </motion.div>
           </div>
         </div>

@@ -30,9 +30,9 @@
       .tell-us-form {
         background-color: var(--background-one);
         padding: 32px;
-        margin-bottom: 80px;
+        // margin-bottom: 80px;
         position: absolute;
-
+        margin-top: 0 !important;
         margin: 80px;
         left: 0;
         z-index: 10;
