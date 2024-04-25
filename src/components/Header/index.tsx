@@ -7,9 +7,23 @@ import { useNavigate } from "react-router-dom";
 
 const Header: React.FC = () => {
   const navigate = useNavigate();
+
   const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) section.scrollIntoView({ behavior: "smooth" });
+    const element = document.getElementById(sectionId);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const navigateAndScroll = (elementId: string) => {
+    navigate("/");
+
+    setTimeout(() => {
+      scrollToSection(elementId);
+    }, 100);
   };
   return (
     <div className="header-container">
@@ -19,7 +33,7 @@ const Header: React.FC = () => {
           <Button
             children="Quotes"
             variant="primary"
-            onClick={() => scrollToSection("quote")}
+            onClick={() => [navigate("/"), navigateAndScroll("quote")]}
           />
         </div>
       </div>

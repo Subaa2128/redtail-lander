@@ -11,6 +11,12 @@ import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
   const navigate = useNavigate();
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Smooth scrolling
+    });
+  };
   return (
     <div className="footer-container">
       <div className="mx">
@@ -80,10 +86,15 @@ const Footer = () => {
               </p>
             </div>
             <div className="terms-and-uses">
-              <p onClick={() => navigate("/terms-and-condition")}>
+              <p
+                onClick={() => [
+                  navigate("/terms-and-condition"),
+                  scrollToTop(),
+                ]}
+              >
                 Terms of use
               </p>
-              <p onClick={() => navigate("/privacy-policy")}>
+              <p onClick={() => [navigate("/privacy-policy"), scrollToTop()]}>
                 Privacy & Other policies
               </p>
             </div>
