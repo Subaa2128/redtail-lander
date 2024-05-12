@@ -24,7 +24,7 @@ const PrivacyPolicy = () => {
                 {`>`}Privacy policy
               </p>
             </div>
-            <h1>Terms & Conditions.</h1>
+            <h1>Privacy policy.</h1>
             <p>
               At Redtail Insurance Agency, we are committed to protecting your
               privacy and ensuring the security of your personal information.

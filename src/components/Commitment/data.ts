@@ -4,27 +4,27 @@ import Lock from "../../assets/icons/lock.svg";
 import Headset from "../../assets/icons/headset.svg";
 export const CardData = [
   {
-    icon: Shield,
-    heading: "Trusted Expertise",
-    description:
-      "Benefit from our decades of industry experience and knowledge, ensuring you receive expert guidance and support at every step of your life insurance journey.",
-  },
-  {
-    icon: Bulb,
-    heading: "Customized Solutions",
-    description:
-      "Discover personalized coverage options tailored to your unique needs and circumstances, providing you with the flexibility and peace of mind you deserve.",
-  },
-  {
     icon: Lock,
-    heading: "Financial Security",
+    heading: "Simplified Navigation",
     description:
-      "Rest assured knowing that your loved ones' future is safeguarded with our strong financial stability and commitment to delivering reliable insurance solutions.",
+      "Forget insurance jargon! Our team provides clear explanations and expert guidance. We translate complex terms into understandable language, ensuring you make informed decisions throughout the process.",
   },
   {
     icon: Headset,
     heading: "Exceptional Service",
     description:
-      "Our dedicated team provides unparalleled customer support, addressing concerns and offering guidance to ensure your peace of mind throughout the life insurance process.",
+      "We have a dedicated customer service team that acts as your advocate, readily available to answer questions, assist with claims, and provide ongoing support throughout the life of your policy. ",
+  },
+  {
+    icon: Shield,
+    heading: "Unparalleled Expertise",
+    description:
+      "Our team of experts meticulously analyzes every option to tailor a policy that seamlessly safeguards your loved ones. Just experience the unparalleled power of life insurance planning with us.",
+  },
+  {
+    icon: Bulb,
+    heading: "Personalized Solutions",
+    description:
+      "We know your needs are unique, that's why our qualified advisors take the time to understand your financial situation and goals.  This personalized approach ensures you get the optimal life insurance coverage.",
   },
 ];

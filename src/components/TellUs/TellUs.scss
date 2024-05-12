@@ -3,6 +3,7 @@
   padding-top: 80px;
 
   .tell-us-wrapper {
+    position: relative;
     .heading {
       padding-bottom: 64px;
       display: flex;
@@ -97,6 +98,16 @@
           width: 100%;
           object-fit: cover;
           overflow: hidden;
+
+          @media (min-width: 1420px) {
+            height: 750px !important;
+          }
+          @media (min-width: 1620px) {
+            height: 800px !important;
+          }
+          @media (min-width: 1820px) {
+            height: 850px !important;
+          }
         }
       }
     }

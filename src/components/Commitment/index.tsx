@@ -6,7 +6,7 @@ const Commitment = () => {
       <div className="mx">
         <div className="commitment-wrapper">
           <div className="heading">
-            <h1>Our commitment to you.</h1>
+            <h1>Completing your financial blueprint</h1>
             <div className="border"></div>
           </div>
           <div className="card-container">

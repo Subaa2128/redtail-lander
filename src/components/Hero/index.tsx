@@ -10,7 +10,8 @@ const Hero: React.FC = () => {
   return (
     <div className="hero-container">
       <div className="mx">
-        <div className="hero-wrapper">
+   <div className="hero">
+   <div className="hero-wrapper">
           <div className="hero-content">
             <h1>More than just a policy.</h1>
 
@@ -27,6 +28,7 @@ const Hero: React.FC = () => {
             />
           </div>
         </div>
+   </div>
       </div>
     </div>
   );

@@ -16,14 +16,19 @@
       border: 1px solid var(--border-primary);
       padding: 16px;
       transition: background-color 1s ease;
+      background-image: linear-gradient(#ff6000, #ff6000);
+      background-size: 200% 0.08em;
+      background-position: 200% 100%;
+      background-repeat: no-repeat;
+      transition: 0.4s;
       p {
         padding-top: 16px;
         transition: 0.5s ease;
       }
       &:hover {
-        background-color: var(--secondary-color);
-
-        animation: move 2s forwards;
+        // background-color: var(--secondary-color);
+        background-size: 100% 100%;
+        background-position: 100% 100%;
         p {
           color: var(--text-tertiary);
         }
@@ -43,32 +48,28 @@
       align-items: center;
       flex: 1;
       border: 1px solid var(--border-primary);
+      position: relative;
       transition: background-color 1s ease;
+      background-image: linear-gradient(#ff6000, #ff6000);
+      background-size: 200% 0.08em;
+      background-position: 200% 100%;
+      background-repeat: no-repeat;
+      transition: 0.4s;
+
       .content {
         border: none;
+
         &:hover {
           background-color: transparent;
         }
       }
       &:hover {
-        background-color: var(--secondary-color);
-
-        animation: move 2s forwards;
+        background-size: 100% 100%;
+        background-position: 100% 100%;
         p {
           color: var(--text-tertiary);
         }
       }
     }
-  }
-}
-
-@keyframes move {
-  0% {
-    bottom: 0;
-    left: 0;
-  }
-  100% {
-    top: 0;
-    right: 0;
   }
 }
