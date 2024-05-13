@@ -33,8 +33,7 @@
         padding: 32px;
         // margin-bottom: 80px;
         position: absolute;
-        margin-top: 0 !important;
-        margin: 80px;
+        margin: 0 80px 80px;
         left: 0;
         z-index: 10;
         @media (max-width: 650px) {
@@ -42,6 +41,7 @@
         }
         .login-form {
           padding-top: 32px;
+
           .input-container {
             display: flex;
             align-items: flex-start;
@@ -76,6 +76,7 @@
                 outline: none;
                 width: 100%;
               }
+
               input {
                 color: var(--background-two);
               }

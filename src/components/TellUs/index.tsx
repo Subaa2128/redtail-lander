@@ -24,7 +24,7 @@ const validationSchema = Yup.object({
     .max(50, "Too Long!")
     .required("Required"),
   lastName: Yup.string()
-    .min(2, "Too Short!")
+    .min(1, "Too Short!")
     .max(50, "Too Long!")
     .required("Required"),
   email: Yup.string().email("Invalid email").required("Required"),
@@ -46,6 +46,23 @@ const TellUs = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY || window.pageYOffset;
+      // Adjust the threshold as needed
+      if (scrollY > 1900 && scrollY < 2500) {
+        setHover(true);
+      } else {
+        setHover(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   const imageAnimationX = screenWidth <= 900 ? 0 : 350;
 
   const handleSubmit = (values: typeof initialValues) => {
@@ -55,12 +72,9 @@ const TellUs = () => {
       console.log(error);
     }
   };
+
   return (
-    <div
-      className="tell-us-container"
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-    >
+    <div className="tell-us-container">
       <div className="mx">
         <div className="tell-us-wrapper" id="quote">
           <div className="heading">
