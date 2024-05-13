@@ -49,8 +49,10 @@ const TellUs = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY || window.pageYOffset;
+      const targetElement: any = document.getElementById("open"); // Change 'your-target-id' to the ID you want to scroll to
+
       // Adjust the threshold as needed
-      if (scrollY > 1900 && scrollY < 2500) {
+      if (targetElement && scrollY > targetElement.offsetTop) {
         setHover(true);
       } else {
         setHover(false);
@@ -74,7 +76,7 @@ const TellUs = () => {
   };
 
   return (
-    <div className="tell-us-container">
+    <div className="tell-us-container" id="open">
       <div className="mx">
         <div className="tell-us-wrapper" id="quote">
           <div className="heading">
