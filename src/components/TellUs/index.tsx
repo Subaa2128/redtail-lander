@@ -8,6 +8,8 @@ import Mail from "../../assets/icons/grey-mail.svg";
 import Phone from "../../assets/icons/grey-phone.svg";
 import Button from "../Button";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
+import { useNavigate } from "react-router-dom";
 
 const initialValues = {
   firstName: "",
@@ -34,10 +36,10 @@ const validationSchema = Yup.object({
 });
 
 const TellUs = () => {
+  const navigate = useNavigate();
   const [hover, setHover] = useState(false);
-
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
@@ -49,9 +51,7 @@ const TellUs = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY || window.pageYOffset;
-      const targetElement: any = document.getElementById("open"); // Change 'your-target-id' to the ID you want to scroll to
-
-      // Adjust the threshold as needed
+      const targetElement: any = document.getElementById("open");
       if (targetElement && scrollY > targetElement.offsetTop) {
         setHover(true);
       } else {
@@ -67,11 +67,36 @@ const TellUs = () => {
   }, []);
   const imageAnimationX = screenWidth <= 900 ? 0 : 350;
 
-  const handleSubmit = (values: typeof initialValues) => {
+  const handleSubmit = async (values: typeof initialValues) => {
     try {
-      console.log(values);
+      setLoading(true);
+      const emailParams = {
+        to_email: "office@redtail.agency",
+        subject: "details",
+        message: `
+        username:${values.firstName}${values.lastName}, 
+        userMail:${values.email},
+        userPhoneNumber:${values.phone},
+        insurance:${values.insurance},
+        help:${values.help}
+   `,
+        from_name: values.firstName,
+        to_name: "Redtail Agency",
+      };
+
+      const response = await emailjs.send(
+        "service_lu85ban",
+        "template_bl0xrda",
+        emailParams,
+        "1BBb4Wl8wcNJ535hw"
+      );
+      console.log("Email sent", response);
+      navigate("/");
+      setLoading(false);
     } catch (error) {
       console.log(error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -255,7 +280,14 @@ const TellUs = () => {
                             <p>{errors.help}</p>
                           ) : null}
                         </div>
-                        <Button variant="primary" type="submit">
+                        <Button
+                          variant="primary"
+                          type="submit"
+                          disabled={loading}
+                          style={{
+                            background: loading ? "#f29860" : "#ff6000",
+                          }}
+                        >
                           Get a quote
                         </Button>
                       </div>
