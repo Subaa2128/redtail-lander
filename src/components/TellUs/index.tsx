@@ -9,7 +9,6 @@ import Phone from "../../assets/icons/grey-phone.svg";
 import Button from "../Button";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { useNavigate } from "react-router-dom";
 
 const initialValues = {
   firstName: "",
@@ -36,7 +35,6 @@ const validationSchema = Yup.object({
 });
 
 const TellUs = () => {
-  const navigate = useNavigate();
   const [hover, setHover] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [loading, setLoading] = useState(false);
