@@ -91,12 +91,13 @@ const TellUs = () => {
         "1BBb4Wl8wcNJ535hw"
       );
       console.log("Email sent", response);
-      navigate("/");
+
       setLoading(false);
     } catch (error) {
       console.log(error);
     } finally {
       setLoading(false);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
