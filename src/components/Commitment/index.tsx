@@ -1,4 +1,4 @@
-import { SetStateAction, useState } from "react";
+import { useState } from "react";
 import "./Commitment.scss";
 import { CardData } from "./data";
 const Commitment = () => {
