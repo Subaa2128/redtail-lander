@@ -54,7 +54,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="border"></div>
+            {/* <div className="border"></div>
             <div className="house-of-operation">
               <h2>House of operation</h2>
               <div className="content">
@@ -76,7 +76,7 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="second-container">
             <div className="">

@@ -41,9 +41,52 @@
         @media (max-width: 730px) {
           max-width: 100%;
         }
+        .header {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          gap: 4px;
+          padding-bottom: 16px;
+          .border {
+            width: 64px;
+            height: 2px;
+            background: var(--secondary-color);
+          }
+        }
+        h5 {
+          color: #999;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 16px; /* 114.286% */
+          letter-spacing: 0.84px;
+          text-transform: uppercase;
+          padding-top: 16px;
+        }
         h3 {
-          padding: 16px 0;
+          padding: 16px 0 0;
           line-height: normal;
+          font-size: 20px;
+          @media (max-width: 650px) {
+            font-size: 24px;
+          }
+        }
+        p {
+          padding-bottom: 16px;
+        }
+        span {
+          color: var(--secondary-color);
+          border-bottom: 1px solid var(--secondary-color);
+        }
+        .content {
+          overflow: hidden;
+          max-height: 200px;
+          transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+          padding: 0;
+        }
+
+        .content.expanded {
+          max-height: 500px; /* Adjust this value based on your content */
+          padding: 10px 0;
         }
         &:hover {
           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
