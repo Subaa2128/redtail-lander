@@ -1,21 +1,25 @@
 .footer-container {
   background-color: var(--background-two);
   .footer-wrapper {
-    padding: 80px;
+    padding: 80px 200px;
+    @media (max-width: 1100px) {
+      padding: 40px 64px;
+    }
     @media (max-width: 650px) {
       padding: 40px 24px;
     }
     .first-container {
       margin-bottom: 64px;
       display: flex;
-      justify-content: center;
-      gap: 46px;
+      justify-content: space-between;
+      gap: 48px;
       @media (max-width: 900px) {
         flex-direction: column;
         gap: 24px;
+        margin-bottom: 24px;
       }
       .footer-logo {
-        width: 40%;
+        width: 60%;
         p {
           padding-top: 16px;
         }
@@ -32,6 +36,10 @@
             width: 40px;
             height: 40px;
             cursor: pointer;
+            @media (max-width: 650px) {
+              width: 32px;
+              height: 32px;
+            }
           }
           @media (max-width: 650px) {
             padding-top: 16px;
@@ -69,38 +77,38 @@
           }
         }
       }
-      .house-of-operation {
-        h2 {
-          padding-bottom: 24px;
-          @media (max-width: 650px) {
-            padding-bottom: 16px;
-          }
-        }
-        .content {
-          display: flex;
-          gap: 16px;
-          flex-direction: column;
-          .details {
-            display: flex;
-            gap: 8px;
-            flex-direction: column;
-            h4 {
-              font-size: 20px;
-              line-height: normal;
-              @media (max-width: 650px) {
-                font-size: 16px;
-              }
-            }
-            .date {
-              display: flex;
-              gap: 8px;
-              .border {
-                border-right: 1px solid var(--border-primary);
-              }
-            }
-          }
-        }
-      }
+      // .house-of-operation {
+      //   h2 {
+      //     padding-bottom: 24px;
+      //     @media (max-width: 650px) {
+      //       padding-bottom: 16px;
+      //     }
+      //   }
+      //   .content {
+      //     display: flex;
+      //     gap: 16px;
+      //     flex-direction: column;
+      //     .details {
+      //       display: flex;
+      //       gap: 8px;
+      //       flex-direction: column;
+      //       h4 {
+      //         font-size: 20px;
+      //         line-height: normal;
+      //         @media (max-width: 650px) {
+      //           font-size: 16px;
+      //         }
+      //       }
+      //       .date {
+      //         display: flex;
+      //         gap: 8px;
+      //         .border {
+      //           border-right: 1px solid var(--border-primary);
+      //         }
+      //       }
+      //     }
+      //   }
+      // }
     }
     .second-container {
       display: flex;

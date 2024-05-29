@@ -1,6 +1,5 @@
 .header-container {
-  // background-color: var(--primary-color);
-  background-color: #f5dec2;
+  background-color: var(--primary-color);
   .header-wrapper {
     display: flex;
     justify-content: space-between;
@@ -15,6 +14,11 @@
     @media (max-width: 650px) {
       img {
         width: 146px;
+      }
+    }
+    @media (max-width: 550px) {
+      img {
+        width: 120px;
       }
     }
   }

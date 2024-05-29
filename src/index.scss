@@ -46,6 +46,7 @@
   --text-highlight: #555;
   --text-error: #ee3737;
 }
+
 html {
   font-size: 62.5%;
 
@@ -100,10 +101,10 @@ h2 {
 h3 {
   color: var(--text-primary);
   font-family: "NeuePower-Ultra";
-  font-size: 32px;
+  font-size: 20px;
 
   @media (max-width: 650px) {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 h4 {

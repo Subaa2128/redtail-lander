@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
                         <h4>{slide.content}</h4>
                       </div>
                       <Button
-                        children="Get a quote"
+                        children="Explore"
                         variant="primary"
                         onClick={() => scrollToSection("quote")}
                       />

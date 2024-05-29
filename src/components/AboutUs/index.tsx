@@ -28,7 +28,7 @@ const AboutUs = () => {
             transition={{ duration: 1, ease: "easeOut" }}
           >
             <div className="heading">
-              <h1>Experiance You Can Trust</h1>
+              <h1>Experience You Can Trust</h1>
               <div className="border"></div>
             </div>
             <p

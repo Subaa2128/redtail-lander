@@ -41,16 +41,16 @@ const Footer = () => {
               <h2>Contact info</h2>
               <div className="info">
                 <div className="details">
-                  <img src={Location} alt="" />
-                  <p>4220 San Mateo Blvd NE, Albuquerque, New York - 87110.</p>
-                </div>
-                <div className="details">
                   <img src={Phone} alt="" />
-                  <p>(505) 346-2020</p>
+                  <p>586-907-8700</p>
                 </div>
                 <div className="details">
                   <img src={Mail} alt="" />
-                  <p>redtailinsurance@agency.com</p>
+                  <p>sam@redtail.agency</p>
+                </div>
+                <div className="details">
+                  <img src={Location} alt="" />
+                  <p>455 E Maple Rd Troy, Michigan 48083, USA.</p>
                 </div>
               </div>
             </div>
